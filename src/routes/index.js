@@ -2,8 +2,7 @@ const express = require('express')
 const router = express.Router()
 
 module.exports = () => {
-  router.get('/', (req, res) => {
-    res.send('index routes')
-  })
+  router.get('/clientes', clientesController.selectClientes)
+  router.post('clientes', clientesController.createCliente)
   return router
 }
